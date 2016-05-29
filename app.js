@@ -118,6 +118,9 @@ app.post('/webhook/', function (req, res) {
           console.log("Resetting session");
           // Delete everything we know about this user
           db.sessions.remove({user_id:senderId});
+          resetApp(session);
+          fbmsgr.sendTextMessage( 
+              "Type 'help' for the menu.", event.sender.id, req, res);
           // The loop has been hijacked
           continue;
         }
@@ -136,7 +139,7 @@ app.post('/webhook/', function (req, res) {
         session.app = "main_menu";
         mod = require(LIB_DIR+"main_menu.js");
         mod = new mod(fbmsgr);
-        mod.showMenu( senderId,req,res,resetApp );
+        mod.showMenu( senderId,req,res );
       } // ignore anything else
   
       // Persist the session
