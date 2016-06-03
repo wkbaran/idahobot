@@ -1,3 +1,4 @@
+[ ] better logging w/bunyan
 [ ] make all components independent modules
 [ ] unit tests
 [ ] documentation
@@ -5,3 +6,6 @@
 [ ] input validation
 [ ] externalize config
 [ ] turn lookup_charge into FBMwizard
+[ ] add profiling and monitoring
+[ ] build webpack workflow
+

@@ -98,6 +98,11 @@ app.post('/webhook/', function (req, res) {
     console.log("Event",event);
     senderId = event.sender.id;
 
+    if ( event.optin ) {
+      // Came here from 'Send to Messenger'
+      // Delete any existing session
+      db.sessions.remove({user_id:senderId});
+    } 
     if ( event.delivery ) {
       // Ignore delivery acks for now
       // We don't want them to disrupt the current session
@@ -114,7 +119,7 @@ app.post('/webhook/', function (req, res) {
 
       // Short circuit the loop with any top-level command
       if ( event.message && event.message.text ) {
-        if ( event.message.text === "reset session" ) {
+        if ( event.message.text.toUpperCase() === "RESET SESSION" ) {
           console.log("Resetting session");
           // Delete everything we know about this user
           db.sessions.remove({user_id:senderId});
