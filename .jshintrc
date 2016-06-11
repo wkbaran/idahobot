@@ -1,0 +1,7 @@
+{
+  "node": true,
+  "jquery": true,
+  "multistr": true,
+  "strict": false,
+  "esversion": 5
+}

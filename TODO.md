@@ -8,4 +8,5 @@
 [ ] turn lookup_charge into FBMwizard
 [ ] add profiling and monitoring
 [ ] build webpack workflow
-
+[ ] support multiple configurable configs
+[ ] add web ui for managing configs
