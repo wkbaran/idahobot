@@ -19,5 +19,5 @@ Use 'reset session' to start over.
 Used the following to enable the app at FB. After so many failures you'd 
 have to re-init:
 ```sh
-curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=EAAYvysDghZAUBAOpZAqx7x765HNbR2pdCRZBMMa6LqOy7fQzB8yhieoHgn0OYmapxAj2NBipA7rltxm2RdcHm78UoTxDViJphhHygGRGYbMUc9mIW9Pu5CZAaRVbWDtyUE6Pa41dpwlJGEZAOQDIB5U6NyNL738pPYtUpBi308gZDZD"'
+curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<ACCESSTOKEN>"'
 ```
